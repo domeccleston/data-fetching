@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import useSWR from 'swr'
 
 const API = 'https://61b73054c95dd70017d4135c.mockapi.io/people';
@@ -6,7 +5,7 @@ const API = 'https://61b73054c95dd70017d4135c.mockapi.io/people';
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function Csr() {
-  const { data, error } = useSWR(API, fetcher);
+  const { data } = useSWR(API, fetcher);
 
   return (
     <div>
